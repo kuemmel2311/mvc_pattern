@@ -1,0 +1,284 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    padding: 1.3em;
+    color: #000000;
+}
+/* Überschriften */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+/* Navigationsleiste */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    position: relative;
+}
+.header {
+    text-align: center;
+    padding: 10px;
+}
+
+.header-logo {
+    max-height: 180px;
+    width: auto;
+    margin-top: 10px;
+}
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Gameplan-Button */
+.btn-secondary {
+    background-color: #8f8e8e;
+    color: white;
+}
+/* Gameplan-Button Maus */
+.btn-secondary:hover {
+    background-color: #000000;
+}
+/* Add new Game-Button */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+/* Add new Game-Button Maus */
+.btn-primary:hover {
+    background-color: #6ba7e6;
+}
+/* Search-Button */
+.search-form {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+.reset-form {
+    margin-left: auto;
+}
+/* Reset all changes-Button */
+.btn-reset {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* Rest all changes-Button Maus */
+.btn-reset:hover {
+    background-color: #8f8e8e;
+}
+/* Tabelle */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background-color: #dad8d8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px 10px;
+    text-align: left;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+thead {
+    background-color: #004080;
+    color: #fff;
+}
+/* Trennung jeder Zeile mit einem Strich */
+tbody td {
+    padding: 0.2em;
+    border-bottom: 1px solid #000000;
+}
+
+td a {
+    margin-right: 0.1em;
+    font-size: 0.7em;
+}
+/* To the Top-Button */
+.scroll-bottom-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+#scrollBottomBtn {
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Action-Buttons */
+a.view-link, a.edit-link, a.delete-link {
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+}
+/* View-Button */
+a.view-link {
+    background-color: #e0f0ff;
+    color: #0066cc;
+}
+/* Edit-Button */
+a.edit-link {
+    background-color: #fff4e0;
+    color: #cc6600;
+}
+/* Delete-Button */
+a.delete-link {
+    background-color: #ffe0e0;
+    color: #cc0000;
+}
+/* View-Button Maus */
+a.view-link:hover {
+    background-color: #cce7ff;
+}
+/* Edit-Button Maus */
+a.edit-link:hover {
+    background-color: #ffe6cc;
+}
+/* Delete-Button Maus */
+a.delete-link:hover {
+    background-color: #ffcccc;
+}
+/* Zeilenbreiten der Tabelle */
+th:nth-child(1), td:nth-child(1) { width: 50px; }
+th:nth-child(2), td:nth-child(2) { width: 100px; }
+th:nth-child(3), td:nth-child(3) { width: 100px; }
+th:nth-child(4), td:nth-child(4) { width: 100px; }
+th:nth-child(5), td:nth-child(5) { width: 40px; }
+th:nth-child(6), td:nth-child(6) { width: 100px; }
+th:nth-child(7), td:nth-child(7) { width: 40px; }
+th:nth-child(8), td:nth-child(8) { width: 50px; }
+th:nth-child(9), td:nth-child(9) { width: 55px; }
+/* wenn Bildschirm kleiner als 768 px wird Tabelle umgebaut (Smartphones, etc.) */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tbody td {
+    position: relative;
+    padding-left: 50%;
+  }
+  tbody td::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    padding-left: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+  }
+}
+
+.game-form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.game-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-form p {
+    margin: 30px auto;
+}
+/* Input der Search-Leiste */
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+/* Elemente der Formulare */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+/* Submit- & Cancel-Button */
+.submit-btn, .cancel-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+/* Submit-Button Farbe*/
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none
+}
+/* Submit-Button Maus */
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+/* Cancel-Button Farbe*/
+.cancel-btn {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ccc;
+}
+/* Cancel-Button Maus */
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
